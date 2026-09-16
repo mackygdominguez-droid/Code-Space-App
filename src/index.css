@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 210 40% 97%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 189 94% 43%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 210 40% 92%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 215 19% 40%;
+    --accent: 210 40% 92%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 189 94% 43%;
+    --radius: 0.375rem;
+
+    --cs-surface: 0 0% 100%;
+    --cs-sunken: 210 40% 96%;
+    --cs-line: 214 32% 88%;
+    --cs-hover: 210 40% 92%;
+    --cs-ink: 222 47% 11%;
+    --cs-muted: 215 19% 40%;
+    --cs-brand: 189 94% 43%;
+    --cs-brand-fg: 222 47% 11%;
+    --cs-success: 160 84% 39%;
+    --cs-warning: 38 92% 50%;
+    --cs-danger: 0 72% 51%;
+    --cs-grid: 214 32% 82% / 0.4;
+  }
+
+  .dark {
+    --background: 228 21% 7%;
+    --foreground: 210 40% 96%;
+    --card: 225 21% 11%;
+    --card-foreground: 210 40% 96%;
+    --popover: 225 21% 11%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 189 94% 43%;
+    --primary-foreground: 228 21% 7%;
+    --secondary: 225 21% 14%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 225 21% 14%;
+    --muted-foreground: 215 25% 47%;
+    --accent: 225 21% 14%;
+    --accent-foreground: 210 40% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 96%;
+    --border: 228 17% 18%;
+    --input: 228 17% 18%;
+    --ring: 189 94% 43%;
+
+    --cs-surface: 225 21% 11%;
+    --cs-sunken: 228 21% 7%;
+    --cs-line: 228 17% 18%;
+    --cs-hover: 228 17% 18%;
+    --cs-ink: 210 40% 96%;
+    --cs-muted: 215 25% 47%;
+    --cs-brand: 189 94% 43%;
+    --cs-brand-fg: 228 21% 7%;
+    --cs-success: 160 84% 39%;
+    --cs-warning: 38 92% 50%;
+    --cs-danger: 0 72% 51%;
+    --cs-grid: 228 17% 18% / 0.5;
+  }
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  margin: 0;
+  padding: 0;
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.grid-bg {
+  background-image: linear-gradient(to right, hsl(var(--cs-grid)) 1px, transparent 1px),
+                    linear-gradient(to bottom, hsl(var(--cs-grid)) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Theme color helper classes */
+.bg-surface {
+  background-color: hsl(var(--cs-surface));
+}
+.bg-sunken {
+  background-color: hsl(var(--cs-sunken));
+}
+.bg-hoverbg {
+  background-color: hsl(var(--cs-hover));
+}
+.bg-brand {
+  background-color: hsl(var(--cs-brand));
+}
+.bg-success {
+  background-color: hsl(var(--cs-success));
+}
+.bg-warning {
+  background-color: hsl(var(--cs-warning));
+}
+.bg-danger {
+  background-color: hsl(var(--cs-danger));
+}
+
+.border-line {
+  border-color: hsl(var(--cs-line));
+}
+.border-brand {
+  border-color: hsl(var(--cs-brand));
+}
+.border-t-brand {
+  border-top-color: hsl(var(--cs-brand));
+}
+
+.text-ink {
+  color: hsl(var(--cs-ink));
+}
+.text-muted-ink {
+  color: hsl(var(--cs-muted));
+}
+.text-brand {
+  color: hsl(var(--cs-brand));
+}
+.text-brand-fg {
+  color: hsl(var(--cs-brand-fg));
+}
+.text-success {
+  color: hsl(var(--cs-success));
+}
+.text-warning {
+  color: hsl(var(--cs-warning));
+}
+.text-danger {
+  color: hsl(var(--cs-danger));
+}

@@ -1,0 +1,6 @@
+{
+  "name": "CodeSpace",
+  "description": "Offline-first in-browser workspace and code editor with live HTML preview, file tree management, syntax tools, and export capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
